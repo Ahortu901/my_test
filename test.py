@@ -1,4 +1,4 @@
-def decode(message_file):
+def decode(message_file, output_file):
     try:
         # Read the contents of the file
         with open(message_file, 'r') as file:
@@ -19,9 +19,11 @@ def decode(message_file):
 
     # Construct the decoded message using words corresponding to pyramid numbers
     decoded_message = " ".join(pyramid_words[num] for num in range(1, max_number + 1))
-
+    # Write the decoded message to the output file
+    with open(output_file, 'w') as file:
+        file.write(decoded_message)
     return decoded_message
 
 # Example usage:
-decoded_message = decode('codng_qual_input.txt')
+decoded_message = decode('codng_qual_input.txt', 'decoded_message.txt')
 print(decoded_message)
