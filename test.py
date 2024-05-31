@@ -1,4 +1,4 @@
-def decode(message_file, output_file):
+def decode(message_file):
     try:
         # Read the contents of the file
         with open(message_file, 'r') as file:
@@ -25,5 +25,5 @@ def decode(message_file, output_file):
     return decoded_message
 
 # Example usage:
-decoded_message = decode('codng_qual_input.txt', 'decoded_message.txt')
+decoded_message = decode('codng_qual_input.txt')
 print(decoded_message)
